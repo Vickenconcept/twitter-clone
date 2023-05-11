@@ -1,232 +1,320 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>White Navbar Example</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-HsosxNhlVc0RmNZo7VGrRIw0QCGZ1q3Kj45zvsP9GktIAmztmAFq3jmjNuYzv6Tp" crossorigin="anonymous">
 
-    <style>
-      *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        font-family: 'Poppins', sans-serif;
-        background-color: #e6ecf0;
-        margin: 0;
-        padding: 0;
-      }
-      /* Style for the navbar */
-      .navbar  {
-        background-color: white;
-        padding: 10px 40px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-wrap: wrap;
-      }
-      .navbar a {
-        padding: 14px 20px;
-        text-align: center;
-      }
-      /* Style for the links */
-       a {
-/*        color: black;*/
-        text-decoration: none;
-        margin-right: 20px;
-        font-size: 15px;
-        font-weight: semi-bold;
-        padding: 10px 20px;
-        
-      }
-      .nav-link {
-        color: black;
-         margin-right: 20px;
-        flex-wrap: wrap;
-      }
-      
-      /* Style for the tweet-link icon */
-      .navbar-tweet {
-        margin-left: auto;
+<head>
+  <title>White Navbar Example</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-HsosxNhlVc0RmNZo7VGrRIw0QCGZ1q3Kj45zvsP9GktIAmztmAFq3jmjNuYzv6Tp" crossorigin="anonymous">
 
-      }
-      .tweet-link {
-        background-color: cornflowerblue;
-        color: white;
-        padding: 10px 20px;
-        border-radius: 120px;
-        
-      }
-      .tweet {
-        display: flex;
-        padding: 20px 0px 0px 20px;
-/*        justify-content: center;*/
-        align-items: center;
-      }
-      .tweet img {
-          margin-right: 10px;  
-      }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      .flex-container {
-        display: flex;
-        flex-direction: row; 
-        justify-content: space-between;
-        flex-wrap: wrap;
-      }
-      
-      #profile {
-/*          width :20rem;*/
-          margin-right: 10px;
-          flex-grow: 1;
-          background-color: red;
-      }
-      #timeline {
-        flex-grow: 4;
-        margin-left: 10px;
-        background-color: white;
-      }
+    .font-bold {
+      font-weight: 600;
+      font-size: 13px;
+    }
 
-      main {
-        padding: 20px 40px;
-      }
+    .text-blue {
+      color: #49b3f4;
+    }
 
-      img{
-        width: 60px;
-        height: 60px;
-        border-radius: 100%;
-        object-fit: cover;
-        object-position: center;
-      }
+    .text-slate {
+      color: slategrey;
+    }
 
-      .desc {
-         padding: 0 0 0 20px;
-        border-bottom: 1px solid #CCC;
-        background-color: white ;
-      }
+    .card-body,
+    .navbar,
+    .card-desc,
+    .tweet,
+    .flex-container {
+      display: flex;
+    }
 
-      .desc img{
-        width: 40px;
-        height: 40px;
-      }
-      .card-desc {
-        display: flex;
-        font-weight: bold;
-        font-size:15px;
-        justify-content: space-between;
-        padding: 0 20px;
-      } 
-      .card-title {
-        color: white;
-      }
-      .card-title img {
-         position:relative; 
-         left:20px; top:-105px; 
-         border:3px solid white; 
-         display: inline-block;
-      }
-      .card-name, .card-title p {
-        text-align: center;
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #e6ecf0;
+      margin: 0;
+      padding: 0;
+    }
 
-      }
-      .card-name {
-        background-color: black;
-        font-size: 30px;
-        font-weight: bold;
-        padding: 25px 0px;
-        margin: 0px;
-        position:relative;
-      }
-      .card-title p {
-         margin: 10px 0;
+    /* Style for the navbar */
+    .navbar {
+      background-color: white;
+      padding: 10px 100px;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-      }
+    .navbar a {
+      padding: 14px 20px;
+      /* text-align: center; */
+    }
 
-   @media only screen and (max-width: 767px) {
-  /* Your CSS rules for smaller screens go here */
-  .navbar  {
+    /* Style for the links */
+    a {
+      text-decoration: none;
+      margin-right: 20px;
+      font-size: 15px;
+      font-weight: bold;
+      padding: 10px 20px;
+
+    }
+
+    .nav-link {
+      color: black;
+      margin-right: 20px;
+      flex-wrap: wrap;
+    }
+
+    /* Style for the tweet-link icon */
+    .navbar-tweet {
+      margin-left: auto;
+
+    }
+
+    .tweet-link {
+      background-color: #49b3f4;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 120px;
+
+    }
+
+    .tweet img {
+      margin-right: 10px;
+    }
+
+    .flex-container {
+      padding: 20px;
+      flex-direction: colum;
+      justify-content: space-around;
+      /* flex-wrap: wrap; */
+    }
+
+    #profile {
+      flex-basis: 400px;
+      background-color: white;
+      height: 280px;
+    }
+
+    #timeline {
+      flex-basis: 750px;
+
+    }
+
+    .tweet {
+      background-color: white;
+      margin-bottom: 1px;
+      padding: 20px 0px 20px 20px;
+      align-items: center;
+    }
+
+    .tweet img {
+      width: 80px;
+      height: 80px;
+    }
+
+    .tweet h4 {
+      font-weight: bolder;
+      font-size: 17px;
+      display: inline;
+    }
+
+    .tweet p,
+    .tweet h4 {
+      padding-right: 50px;
+    }
+
+    img {
+      border-radius: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .desc {
+      padding: 0 0 0 20px;
+      border-bottom: 1px solid #CCC;
+      background-color: white;
+    }
+
+    .card-desc {
+      float: left;
+      margin: -40px 0px 30px 130px;
+      padding: 0 20px;
+      font-weight: bold;
+      font-size: 18px;
+      flex-direction: column;
+      clear: both;
+    }
+
+    .card-title {
+      /* margin: 10px 0; */
+      background-color: black;
+      color: white;
+      font-size: x-large;
+      text-align: center;
+      padding: 30px 0px;
+
+    }
+
+    .card-img {
+      float: left;
+      width: 100px;
+      height: 100px;
+      border: 3px solid white;
+      margin: -40px 0px 0px 30px;
+    }
+
+    .card-body {
+      justify-content: space-around;
+      clear: both;
+    }
+
+    .card-hearder {
+      text-align: center;
+    }
+
+    /* media Query for screen sizes */
+    @media only screen and (max-width: 767px) {
+
+      /* Your CSS rules for smaller screens go here */
+      .navbar {
 
         justify-content: flex-start;
         align-items: flex-start;
         flex-direction: column;
       }
-       .tweet-link {
+
+      .tweet-link {
         background-color: cornflowerblue;
         color: white;
         padding: 0px 0px;
         border-radius: 120px;
-        
       }
+
       .navbar-tweet {
         margin-left: 0;
 
       }
-       .tweet-link {
+
+      .tweet-link {
         background-color: cornflowerblue;
         color: white;
         padding: 5px 20px;
-        border-radius: 120px;
-        
+        border-radius: 50px;
+        margin-bottom: 10px;
+
       }
 
+      /* for main  */
+      .flex-container {
+        flex-direction: colum;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
 
-  }
+      .flex-container>div {
+        flex-grow: 1;
+      }
 
+      #profile {
+        margin: 20px 0px;
+      }
+    }
+  </style>
+</head>
 
-    </style>
-  </head>
-  
-  <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-          <a href="#" class="nav-link">Home</a>
-          <a href="#" class="nav-link">Moment</a>
-          <a href="#" class="nav-link">Notification</a>
-          <a href="#" class="nav-link">
-            Message
-          </a>
-     <div class="navbar-tweet">
-        <a href="#" class="tweet-link">Tweet</a>
-      </div>
-    </nav>
-    
-    <main class="flex-container">
-      <div class="card" id="profile">
-        <div class="card-header">
-           <img class="card-img" src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60" alt="avater" >
-          <h4 class="card-title">bajankjs</h4>
-          <div class="card-desc">
-            <p>Remy</p>
-            <p> @remy Nov 19</p>
-          </div>
-          <div class="card-body">
-            <div>
-              <p>Tweet</p>
-              <p>5098</p>
-            </div>
-            <div>
-              <p>Following</p>
-              <p>5098</p>
-            </div>
-            <div>
-              <p>Tweet</p>
-              <p>5098</p>
-            </div>
-          </div>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="#" class="nav-link">Home</a>
+    <a href="#" class="nav-link">Moment</a>
+    <a href="#" class="nav-link">Notification</a>
+    <a href="#" class="nav-link">
+      Message
+    </a>
+    <div class="navbar-tweet">
+      <a href="#" class="tweet-link">Tweet</a>
+    </div>
+  </nav>
+  <!-- main tag -->
+  <main class="flex-container">
+    <div class="card" id="profile">
+      <div class="card-header">
+        <h4 class="card-title font-bold ">RATATOUILLE</h4>
+        <img class="card-img"
+          src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60"
+          alt="avater">
+        <div class="card-desc font-bold ">
+          <h4>Remy</h4>
+          <p class="text-slate font-bold"> @remy Nov 19</p>
         </div>
-      </div>
-
-      <div class="card" id="timeline">
-         <div  class="tweet" >
-          <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60" alt="avater" >
+        <div class="card-body font-bold ">
           <div>
-            <h4>Remy<span> @remy Nov 19</span></h2>
-            <p> I am taking this class called CS1230 and the TAs are all so cool!</p>
+            <p>Tweet</p>
+            <p class="text-blue">5098</p>
+          </div>
+          <div>
+            <p>Following</p>
+            <p class="text-blue">5098</p>
+          </div>
+          <div>
+            <p>Tweet</p>
+            <p class="text-blue">5098</p>
           </div>
         </div>
       </div>
-    </main>
-  </body>
+    </div>
+
+    <div class="card" id="timeline">
+      <div class="tweet">
+        <img
+          src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60"
+          alt="avater">
+        <div>
+          <h4>Remy</h2><span class="font-bold text-slate"> @remy Nov 19</span>
+            <p class="font-bold"> I am taking this class called CS1230 and the TAs are all so cool!</p>
+        </div>
+      </div>
+      <div class="tweet">
+        <img
+          src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60"
+          alt="avater">
+        <div>
+          <h4>Remy</h2><span class="font-bold text-slate"> @remy Nov 19</span>
+            <p class="font-bold">It's 2007. yOU just got home from elementyr school. Your mum ha spizza bagels in oven.
+              Ratatouille is in theaters. Life is good.</p>
+        </div>
+      </div>
+      <div class="tweet">
+        <img
+          src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60"
+          alt="avater">
+        <div>
+          <h4>Remy</h2><span class="font-bold text-slate"> @remy Nov 19</span>
+            <p class="font-bold"> I am taking this class called CS1230 and the TAs are all so cool!</p>
+        </div>
+      </div>
+      <div class="tweet">
+        <img
+          src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60"
+          alt="avater">
+        <div>
+          <h4>Remy</h2><span class="font-bold text-slate"> @remy Nov 19</span>
+            <p class="font-bold"> I am taking this class called CS1230 and the TAs are all so cool!</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+</body>
+
 </html>
